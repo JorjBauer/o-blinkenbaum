@@ -4,12 +4,10 @@
 #include <SPI.h>
 #include <SPIFlash.h>      //get it here: https://www.github.com/lowpowerlab/spiflash
 #include <WirelessHEX69.h> //get it here: https://github.com/LowPowerLab/WirelessProgramming/tree/master/WirelessHEX69
-#include <RingBuffer.h>
+#include <RingBuffer.h>    //get it here: https://github.com/JorjBauer/RingBuffer
 #include "SimpleStripLights.h"
 
-// Node 3 is Jake's tree; 11-14 are the dining room (left-to-right)
 #define NODEID             11
-// #define NODEID           3
 #define NETWORKID          212
 #define FREQUENCY     RF69_915MHZ
 #ifdef DEFAULTKEY
@@ -20,8 +18,6 @@
 #endif
 #define FLASH_SS 8
 //#define IS_RFM69HW
-
-#define GATEWAYID 1
 
 RFM69 radio;
 SPIFlash flash(FLASH_SS, 0xEF30); //EF30 for windbond 4mbit flash
